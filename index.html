@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link type="image/x-icon" href="img/icons/favicon.ico"
+        rel="icon">
+    <title>Мацаков В.А. - Тестовое задание</title>
+</head>
+
+<body>
+
+    <section class="page">
+        <div class="page__container">
+            <h1>Тестовое задание на вакансию <br> <span>«Веб-разработчик»</span></h1>
+            <h2>Исполнитель - <span>Мацаков Виктор</span></h2>
+
+            <button class="btn">Кликни</button>
+
+            <img class="page__bg"
+                src="img/img.webp"
+                alt="">
+
+            <p class="page__stek">Мой стек:</p>
+
+            <div class="page__stek-box">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Sass/Scss</li>
+                    <li>БЭМ</li>
+                    <li>Bootstrap</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+                    <li>Git/GitHub</li>
+                    <li>React</li>
+                    <li>Webpack</li>
+                    <li>Gulp</li>
+                </ul>
+
+                <p></p>
+
+                <ul>
+                    <li>WordPress</li>
+                    <li>1C Битрикс</li>
+                    <li>OpenCard</li>
+                    <li>Joomla</li>
+                    <li>Drupal</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Модалные окна -->
+    <div class="modal">
+        <div class="modal__overlay">
+
+            <div class="modal-window" id="mainModal">
+
+                <div class="modal__close"><span></span></div>
+
+                <div class="modal-window__column">
+                    <div class="modal-window__title">
+                        Получите набор файлов <br> для руководителя:
+                    </div>
+                    <img class="modal-window__img-1" src="img/modal-icons.png" alt="">
+                    <img class="modal-window__img-2" src="img/modal-img.png" alt="">
+                </div>
+
+                <div class="modal-window__column">
+                    <div class="modal-window__form">
+
+                        <form action="mailer/smart.php" class="form" id="form">
+
+                            <div class="form__input">
+                                <label for="email">Введите Email для получения файлов:</label>
+                                <input type="email" name="email" placeholder="E-mail" class="input">
+                            </div>
+                            <div class="form__input">
+                                <label for="phone">Введите телефон для подтверждения доступа:</label>
+                                <input type="tel" name="phone" placeholder="+7 (000) 000-00-00" class="input" required>
+                            </div>
+
+                            <div class="form__submit">
+                                <button type="submit" class="submit">
+                                    Скачать файлы <img src="img/icons/button.svg" alt="icon">
+                                </button>
+                                <div class="decor"></div>
+                            </div>
+                        </form>
+                        <div class="modal-window__info-box">
+                            <ul>
+                                <li>PDF 4,7 MB</li>
+                                <li>DOC 0,8 MB</li>
+                                <li>XLS 1,2 MB</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="thanks-modal" id="thanksModal">
+
+                <div class="modal__close"><span></span></div>
+
+                <div class="thanks-modal__title">Готово 👍</div>
+                <div class="thanks-modal__subtitle">Ваш набор скачается в ближайшее время </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Скрипты -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

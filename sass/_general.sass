@@ -1,0 +1,312 @@
+*
+    box-sizing: border-box
+    font-family: MontserratBold,Arial,sans-serif
+
+a
+    text-decoration: none
+
+img
+    display: block
+    max-width: 100%
+    height: auto
+
+ul
+    display: block
+    list-style-type: disc
+    margin-block-start: 0
+    margin-block-end: 0
+    margin-inline-start: 0px
+    margin-inline-end: 0px
+    padding-inline-start: 0px
+    li
+        list-style-type: none
+
+.page
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: space-between
+    overflow: hidden
+    background: url(../img/bg.jpg)
+    &__bg
+        position: absolute
+        left: 46%
+        bottom: 22%
+
+    &__container
+        margin: 0 auto
+        padding: 20px 15px
+        height: 700px
+        width: 95%
+        position: relative
+
+        h1
+            font-size: 60px
+            color: #1f1f1f
+            margin-bottom: 40px
+            span
+                font-size: 70px
+                color: #0081eb
+
+        h2
+            margin-bottom: 70px
+            font-size: 38px
+            font-weight: 400
+            color: #1f1f1f
+            span
+                position: relative
+                &::after
+                    content: ''
+                    display: block
+
+                    position: absolute
+                    bottom: -6px
+                    left: 0
+                    width: 100%
+                    height: 4px
+                    border-radius: 90px
+                    background: #0081eb
+
+        .btn
+            margin-bottom: 70px
+
+    &__stek
+        font-size: 18px
+        font-weight: 600
+        text-transform: uppercase
+        color: #323232
+
+    &__stek-box
+        ul
+            display: flex
+
+            li
+                margin-right: 6px
+                padding: 6px
+                color: #a5a5a5
+
+                border: 2px solid #c9c9c9
+                border-radius: 5px
+
+                &:last-child
+                    margin-right: 0
+
+.btn
+    background: #ff0000
+    width: 235px
+    height: 70px
+    border-radius: 5px
+    border: none
+    cursor: pointer
+
+    color: #fff
+    font-size: 20px
+    text-transform: uppercase
+    letter-spacing: 2px
+
+    position: relative
+
+    overflow: hidden
+
+    z-index: 3
+
+    &::after
+        content: ""
+        background-color: #fff
+        height: 100%
+        width: 3em
+        display: block
+        position: absolute
+        top: 0
+        left: -4.5em
+        transform: skewX(-45deg) translateX(0)
+        transition: none
+        animation: moving 5s ease-in-out infinite
+
+@keyframes moving
+    0%, 100%
+        left: -4.5em
+        opacity: 1
+
+    5.66%
+        left: 100%
+        opacity: 1
+
+    5.67%, 99.99% 
+        opacity: 0
+
+/* Модальные окна */
+
+.modal
+    opacity: 0
+    visibility: hidden
+    transition: opacity .5s, visibility .5s
+    width: 100%
+    height: 100vh
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 99
+    &.active
+        opacity: 1
+        visibility: visible
+    &__overlay
+        background: #000000db
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+    &__close
+        cursor: pointer
+        span
+            display: inline-flex
+            position: absolute
+            top: 1%
+            right: 1%
+            width: 40px
+            height: 40px
+            transform: rotate(45deg)
+            transition: transform 0.5s
+            z-index: 999
+            &::before
+                content: ""
+                position: absolute
+                width: 50%
+                height: 2px
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                background-color: #ff0000
+            &::after
+                content: ""
+                position: absolute
+                width: 2px
+                height: 50%
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                background-color: #ff0000
+            &:hover
+                transform: rotate(135deg)
+
+.modal-window
+    display: flex
+    padding: 46px 40px 0 40px
+
+    background: #fff
+    border-radius: 20px
+
+    width: 910px
+    height: 564px
+
+    position: relative
+    &__column
+        &:nth-child(2)
+            width: 55%
+        &:nth-child(3)
+            width: 42%
+            display: flex
+            align-items: end
+            padding-bottom: 78px
+    &__img-1
+        width: 72%
+        margin-bottom: 30px
+    &__img-2
+        width: 92%
+        margin-left: -10px
+
+    &__title
+        font-size: 36px
+        font-weight: 700
+        margin-bottom: 62px
+    &__info-box
+        font-size: 12px
+        color: #a0a0a0
+        ul
+            display: flex
+            justify-content: center
+            li
+                margin-right: 10px
+                &:last-child
+                    margin-right: 0
+
+.thanks-modal
+    display: none
+    position: fixed
+    padding: 40px
+    border: 1px solid #0081eb
+    border-radius: 10px
+    background: #fff
+
+    text-align: center
+    &__title
+        font-size: 40px
+        color: #0081eb
+        margin-bottom: 20px
+    &__subtitle
+        font-size: 20px
+
+/* Форма */
+.form
+    &__input
+        position: relative
+    label
+        font-size: 15px
+        line-height: 2.1
+    input
+        width: 100%
+        margin-bottom: 20px
+
+        height: 52px
+        border: 1px solid #a0a0a0
+        border-radius: 6px
+
+        padding: 0 14px
+
+        color: #a0a0a0
+        font-size: 16px
+        font-weight: 300
+    .form__submit
+        position: relative
+        margin-bottom: 15px
+    button
+        width: 100%
+        height: 72px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 6px
+        border: none
+        cursor: pointer
+
+        background: linear-gradient(to left, #6ce197, #3ac06b, #6ce197)
+        background-size: 200%
+        transition: .5s
+
+        color: #fff
+        font-size: 28px
+
+        position: relative
+        z-index: 2
+        img
+            margin-left: 10px
+        &:hover
+            background-position: right
+    .decor
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 77px
+        border-radius: 10px
+        background: #36aa60
+
+    #phone-error, #email-error
+        color: red
+        position: absolute
+        right: 10px
+        bottom: 4px
+        background: #fff
+        padding: 4px
