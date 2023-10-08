@@ -21,10 +21,10 @@ $mail->CharSet = 'utf-8';
 
 // Настройки SMTP
 $mail->isSMTP();
-$mail->Host = 'smtp.beget.com';
+$mail->Host = ' ';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@matsakov-victor.com';
-$mail->Password = 'a%FKZF6I';
+$mail->Username = ' ';
+$mail->Password = ' ';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465; 
 
